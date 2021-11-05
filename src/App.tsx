@@ -1,12 +1,18 @@
-import { useState } from 'react'
-import { useAppDispatch, useAppSelector} from './app/hooks';
+import React from 'react'
+import { useAppDispatch, useAppSelector } from './app/hooks';
 import { incremented } from './features/counter/counter-slice';
 import logo from './logo.svg'
 import './App.css'
 
 function App() {
-  const count = useAppSelector((store) => state.counter.value);
 
+  const count = useAppSelector((state) => state.counter.value);
+  const dispatch = useAppDispatch();
+
+
+  function handleClick() {
+    dispatch(incremented())
+  }
 
   return (
     <div className="App">
@@ -14,7 +20,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <button onClick={handleClick}>
             count is: {count}
           </button>
         </p>
