@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAppDispatch, useAppSelector } from './app/hooks';
-import { incremented } from './features/counter/counter-slice';
+import { incremented, decremented } from './store/reducers/panelA';
 import logo from './logo.svg'
 import './App.css'
 
@@ -10,8 +10,12 @@ function App() {
   const dispatch = useAppDispatch();
 
 
-  function handleClick() {
+  function handleIncrement() {
     dispatch(incremented())
+  }
+
+  function handleDecrement() {
+    dispatch(decremented())
   }
 
   return (
@@ -20,7 +24,12 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button onClick={handleClick}>
+          <h1>Increment</h1>
+          <button onClick={handleIncrement}>
+            count is: {count}
+          </button>
+          <h1>Decrement</h1>
+          <button onClick={handleDecrement}>
             count is: {count}
           </button>
         </p>
