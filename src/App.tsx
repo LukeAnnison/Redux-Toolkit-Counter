@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
 
-  const count = useAppSelector((state) => state.counter.value);
+  const count = useAppSelector((state) => state.panel1.value);
   const dispatch = useAppDispatch();
 
 
