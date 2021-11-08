@@ -15,18 +15,18 @@ export const counterSliceC = createSlice({
     },
     reducers: {
         // increement
-        incremented(state) {
+        incrementedC(state) {
             // It's okay to do this because immet makes it immutable
             // under the hood
             state.value++;
         },
         // decrement
-        decremented(state) {
+        decrementedC(state) {
             state.value--;
         }
         // reset
     }
 });
 
-export const { incremented, decremented } = counterSliceC.actions;
+export const { incrementedC, decrementedC } = counterSliceC.actions;
 export default counterSliceC.reducer;

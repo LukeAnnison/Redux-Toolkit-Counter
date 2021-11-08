@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.button {
+  size: medium;
+}
+
+.panel {
+      float:left;
+    width: 33.3%;
+    padding-bottom: 33.3%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
+    background-color: #1E1E1E;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
